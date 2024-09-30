@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+    <script src="https://kit.fontawesome.com/ac42c3b1f7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="chatbot-container">
+        <div class="chatbot-header">
+            <h2 class="main-title">LEXIBOT</h2>
+            
+        </div>
+        <div class="chatbot-body" id="chat-body">
+             <!-- conversation goes here -->
+        </div>
+        <div class="chatbot-footer">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button class="send-msg-btn" id="send-btn">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal for adding new words -->
+    <div id="add-word-modal" class="modal">
+        <div class="modal-content">
+            <h3 class="add-heading">Add New Word</h3>
+            <input type="text" id="new-word" placeholder="Enter the word">
+            <input type="text" id="new-definition" placeholder="Enter the definition">
+            <button id="add-word-btn">Add Word</button>
+            <button id="close-modal-btn">Close</button>
+        </div>
+    </div>
+</body>
+</html>

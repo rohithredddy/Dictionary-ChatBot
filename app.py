@@ -4,9 +4,9 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import os
 from nltk.stem import PorterStemmer
-
+from flask_cors import CORS
 app = Flask(__name__)
-
+CORS(app)
 # Initialize the stemmer
 stemmer = PorterStemmer()
 
